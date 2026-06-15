@@ -47,7 +47,7 @@
                 {
                     isCorrect = fileNames
                         .Select(x => new FileInfo(x))
-                        .All(x => x.Exists && x.Extension.EqualsIgnoreCase(".csv"));
+                        .All(x => x.Exists && (x.Extension.EqualsIgnoreCase(".csv") || x.Extension.EqualsIgnoreCase(".tab") || x.Extension.EqualsIgnoreCase(".tsv")));
                 }
             }
 

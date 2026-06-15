@@ -42,7 +42,7 @@
                 {
                     var result = await _openFileService.DetermineFileAsync(new DetermineOpenFileContext
                     {
-                        Filter = "Text Files (*.csv)|*csv",
+                        Filter = "CSV / TSV / TAB Files (*.csv,*.tsv,*.tab)|*.csv;*.tsv;*.tab",
                         IsMultiSelect = false
                     });
 
