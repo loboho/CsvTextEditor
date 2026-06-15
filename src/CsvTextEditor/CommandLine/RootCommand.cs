@@ -18,6 +18,14 @@
             };
 
             Add(projectOption);
+
+            var projectArgument = new Argument<string?>("project")
+            {
+                Description = "The project file to open (positional argument, e.g. file association)",
+                Arity = ArgumentArity.ZeroOrOne
+            };
+
+            Add(projectArgument);
         }
 
         /// <summary>
