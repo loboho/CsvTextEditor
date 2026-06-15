@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <!-- Ribbon -->
+  <data name="Ribbon_File" xml:space="preserve"><value>文件</value></data>
+  <data name="Ribbon_Open" xml:space="preserve"><value>打开</value></data>
+  <data name="Ribbon_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Ribbon_SaveAs" xml:space="preserve"><value>另存为</value></data>
+  <data name="Ribbon_View" xml:space="preserve"><value>视图</value></data>
+  <data name="Ribbon_FileGroup" xml:space="preserve"><value>文件</value></data>
+  <data name="Ribbon_OpenInEditor" xml:space="preserve"><value>在编辑器中打开</value></data>
+  <data name="Ribbon_Excel" xml:space="preserve"><value>Excel</value></data>
+  <data name="Ribbon_Edit" xml:space="preserve"><value>编辑</value></data>
+  <data name="Ribbon_Copy" xml:space="preserve"><value>复制</value></data>
+  <data name="Ribbon_Cut" xml:space="preserve"><value>剪切</value></data>
+  <data name="Ribbon_Paste" xml:space="preserve"><value>粘贴</value></data>
+  <data name="Ribbon_Undo" xml:space="preserve"><value>撤销</value></data>
+  <data name="Ribbon_Redo" xml:space="preserve"><value>重做</value></data>
+  <data name="Ribbon_FindReplace" xml:space="preserve"><value>查找和替换</value></data>
+  <data name="Ribbon_QuoteColumn" xml:space="preserve"><value>引号列</value></data>
+  <data name="Ribbon_QuickFormat" xml:space="preserve"><value>快速格式化</value></data>
+  <data name="Ribbon_RemoveBlankLines" xml:space="preserve"><value>删除空行</value></data>
+  <data name="Ribbon_RemoveDuplicateLines" xml:space="preserve"><value>删除重复行</value></data>
+  <data name="Ribbon_TrimWhitespaces" xml:space="preserve"><value>修剪空格</value></data>
+  <data name="Ribbon_Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Ribbon_SettingsButton" xml:space="preserve"><value>设置</value></data>
+  <data name="Ribbon_Shortcuts" xml:space="preserve"><value>快捷键</value></data>
+  <data name="Ribbon_Highlight" xml:space="preserve"><value>高亮</value></data>
+  <data name="Ribbon_Statistic" xml:space="preserve"><value>统计</value></data>
+
+  <!-- Status Bar -->
+  <data name="StatusBar_Line" xml:space="preserve"><value>行 </value></data>
+  <data name="StatusBar_Column" xml:space="preserve"><value>列 </value></data>
+  <data name="StatusBar_UpdateToolTip" xml:space="preserve"><value>更新已安装，重启以启用新功能</value></data>
+
+  <!-- Settings -->
+  <data name="Settings_Title" xml:space="preserve"><value>设置</value></data>
+  <data name="Settings_AutomaticUpdates" xml:space="preserve"><value>自动更新</value></data>
+  <data name="Settings_UpdatesNotAvailable" xml:space="preserve"><value>此安装不支持自动更新。如需接收此产品的自动更新，请联系技术支持。</value></data>
+  <data name="Settings_AutoInstallUpdates" xml:space="preserve"><value>自动安装新更新</value></data>
+  <data name="Settings_UpdateChannel" xml:space="preserve"><value>更新通道</value></data>
+  <data name="Settings_UserDataOptions" xml:space="preserve"><value>用户数据选项</value></data>
+  <data name="Settings_OpenDataDir" xml:space="preserve"><value>打开数据目录...</value></data>
+  <data name="Settings_CreateBackup" xml:space="preserve"><value>创建用户数据备份</value></data>
+  <data name="Settings_EditorOptions" xml:space="preserve"><value>编辑器选项</value></data>
+  <data name="Settings_PickEditor" xml:space="preserve"><value>选择编辑器...</value></data>
+  <data name="Settings_AutoSave" xml:space="preserve"><value>每分钟自动保存</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>语言</value></data>
+
+  <!-- Open File -->
+  <data name="OpenFile_Open" xml:space="preserve"><value>打开</value></data>
+  <data name="OpenFile_RecentDocuments" xml:space="preserve"><value>最近使用的文档</value></data>
+  <data name="OpenFile_Computer" xml:space="preserve"><value>计算机</value></data>
+  <data name="OpenFile_OpenEllipsis" xml:space="preserve"><value>打开...</value></data>
+
+  <!-- Recent Items -->
+  <data name="RecentItems_RecentDocuments" xml:space="preserve"><value>最近使用的文档</value></data>
+  <data name="RecentItems_OpenInExplorer" xml:space="preserve"><value>在资源管理器中打开</value></data>
+
+  <!-- Theme -->
+  <data name="Theme_SwitchToDark" xml:space="preserve"><value>切换到深色模式</value></data>
+  <data name="Theme_SwitchToLight" xml:space="preserve"><value>切换到浅色模式</value></data>
+
+  <!-- Language names -->
+  <data name="Language_English" xml:space="preserve"><value>English</value></data>
+  <data name="Language_Chinese" xml:space="preserve"><value>中文 (简体)</value></data>
+</root>

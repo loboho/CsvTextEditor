@@ -9,19 +9,18 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="500" />
         </Grid.ColumnDefinitions>
         
-        <GroupBox Grid.Row="0" Header="Automatic updates">
+        <GroupBox Grid.Row="0" Header="{catel:LanguageBinding Settings_AutomaticUpdates}">
             <StackPanel Orientation="Vertical">
                 <Label Visibility="{Binding IsUpdateSystemAvailable, Converter={catel:BooleanToCollapsingVisibilityConverter}, ConverterParameter=false}" HorizontalAlignment="Left">
-                    <TextBlock TextWrapping="Wrap">
-                        Automatic updates are currently not available for this installation. Please contact support if you would like to receive
-                        automatic updates of this product.
-                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap"
+                               Text="{catel:LanguageBinding Settings_UpdatesNotAvailable}" />
                 </Label>
 
                 <orccontrols:StackGrid IsEnabled="{Binding IsUpdateSystemAvailable}">
@@ -35,15 +34,15 @@
                         <ColumnDefinition Width="*" MinWidth="300" />
                     </Grid.ColumnDefinitions>
 
-                    <CheckBox Grid.ColumnSpan="2" Content="Automatically install new updates" IsChecked="{Binding CheckForUpdates}" />
+                    <CheckBox Grid.ColumnSpan="2" Content="{catel:LanguageBinding Settings_AutoInstallUpdates}" IsChecked="{Binding CheckForUpdates}" />
 
-                    <Label Content="Update channel" />
+                    <Label Content="{catel:LanguageBinding Settings_UpdateChannel}" />
                     <ComboBox ItemsSource="{Binding AvailableUpdateChannels}" SelectedItem="{Binding UpdateChannel}" DisplayMemberPath="Name" />
                 </orccontrols:StackGrid>
             </StackPanel>
         </GroupBox>
 
-        <GroupBox Grid.Row="1" Header="User data options">
+        <GroupBox Grid.Row="1" Header="{catel:LanguageBinding Settings_UserDataOptions}">
             <orccontrols:StackGrid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -54,12 +53,12 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Open data directory..." Command="{Binding OpenApplicationDataDirectory}" />
-                <Button Content="Create user data backup" Command="{Binding BackupUserData}" />
+                <Button Content="{catel:LanguageBinding Settings_OpenDataDir}" Command="{Binding OpenApplicationDataDirectory}" />
+                <Button Content="{catel:LanguageBinding Settings_CreateBackup}" Command="{Binding BackupUserData}" />
             </orccontrols:StackGrid>
         </GroupBox>
 
-        <GroupBox Grid.Row="2" Header="Editor options">
+        <GroupBox Grid.Row="2" Header="{catel:LanguageBinding Settings_EditorOptions}">
             <orccontrols:StackGrid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -71,16 +70,29 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Content="Pick Editor..." Command="{Binding PickEditor}" />
+                <Button Grid.Row="0" Content="{catel:LanguageBinding Settings_PickEditor}" Command="{Binding PickEditor}" />
                 <Label Grid.Row="0" Content="{Binding CustomEditor}" />
 
-                <CheckBox Grid.Row="1" IsChecked="{Binding AutoSaveEditor}" Content="Auto save every minute" />
+                <CheckBox Grid.Row="1" IsChecked="{Binding AutoSaveEditor}" Content="{catel:LanguageBinding Settings_AutoSave}" />
+            </orccontrols:StackGrid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="3" Header="{catel:LanguageBinding Settings_Language}">
+            <orccontrols:StackGrid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" MinWidth="200" />
+                </Grid.ColumnDefinitions>
+
+                <Label Content="{catel:LanguageBinding Settings_Language}" />
+                <ComboBox ItemsSource="{Binding AvailableLanguages}" SelectedItem="{Binding SelectedLanguage}" DisplayMemberPath="DisplayName" />
             </orccontrols:StackGrid>
         </GroupBox>
 
     </Grid>
 
 </catel:DataWindow>
-
-
-

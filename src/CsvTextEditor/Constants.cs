@@ -43,6 +43,9 @@
 
         public const string AutoSaveInterval = "Settings.Application.Editor.AutoSaveInterval";
         public static readonly TimeSpan AutoSaveIntervalDefaultValue = TimeSpan.FromSeconds(60);
+
+        public const string Language = "Settings.Application.Language";
+        public const string LanguageDefaultValue = "en-US";
     }
 
     public static class Commands

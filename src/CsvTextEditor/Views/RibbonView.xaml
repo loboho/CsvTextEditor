@@ -19,95 +19,95 @@
                    CanCustomizeRibbon="False"
                    AutomaticStateManagement="False">
         <fluent:Ribbon.Menu>
-            <fluent:Backstage Header="File">
+            <fluent:Backstage Header="{catel:LanguageBinding Ribbon_File}">
                 <fluent:BackstageTabControl>
-                    <fluent:BackstageTabItem Header="Open">
+                    <fluent:BackstageTabItem Header="{catel:LanguageBinding Ribbon_Open}">
                         <local:OpenFileView />
                     </fluent:BackstageTabItem>
 
-                    <fluent:Button Header="Save"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_Save}"
                                    Command="{catel:CommandManagerBinding File.Save}" />
 
-                    <fluent:Button Header="Save As"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_SaveAs}"
                                    Command="{catel:CommandManagerBinding File.SaveAs}" />
                 </fluent:BackstageTabControl>
             </fluent:Backstage>
         </fluent:Ribbon.Menu>
 
         <fluent:Ribbon.Tabs>
-            <fluent:RibbonTabItem Header="View">
-                <fluent:RibbonGroupBox Header="File">
+            <fluent:RibbonTabItem Header="{catel:LanguageBinding Ribbon_View}">
+                <fluent:RibbonGroupBox Header="{catel:LanguageBinding Ribbon_FileGroup}">
 
-                    <fluent:Button Header="Save"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_Save}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Save}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding File.Save}" />
 
 
-                    <fluent:SplitButton Header="Open in editor"
+                    <fluent:SplitButton Header="{catel:LanguageBinding Ribbon_OpenInEditor}"
                                         LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Edit}, FontFamily=FontAwesome}"
                                         Command="{catel:CommandManagerBinding File.OpenInTextEditor}"
                                         IsEnabled="{Binding IsActiveProjectExists}">
                         <fluent:Gallery ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                            <fluent:Button Header="Excel"
+                            <fluent:Button Header="{catel:LanguageBinding Ribbon_Excel}"
                                            LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.FileExcelO}, FontFamily=FontAwesome}"
                                            Command="{catel:CommandManagerBinding File.OpenInExcel}"/>
                         </fluent:Gallery>
                     </fluent:SplitButton>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox Header="Edit">
-                    <fluent:Button Header="Copy"
+                <fluent:RibbonGroupBox Header="{catel:LanguageBinding Ribbon_Edit}">
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_Copy}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Copy}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Edit.Copy}" />
 
-                    <fluent:Button Header="Cut"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_Cut}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Cut}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Edit.Cut}" />
 
-                    <fluent:Button Header="Paste"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_Paste}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Paste}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Edit.Paste}" />
 
-                    <fluent:Button Header="Undo"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_Undo}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.MailReply}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Edit.Undo}" />
 
-                    <fluent:Button Header="Redo"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_Redo}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.MailForward}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Edit.Redo}" />
 
-                    <fluent:Button x:Name="FindAndReplaceButton" Header="Find and replace"
+                    <fluent:Button x:Name="FindAndReplaceButton" Header="{catel:LanguageBinding Ribbon_FindReplace}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Search}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Edit.FindReplace}" />
 
-                    <fluent:Button Header="Quote column"
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_QuoteColumn}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.QuoteLeft}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Edit.QuoteColumn}" />
 
-                    <fluent:SplitButton Header="Quick Format" LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.AlignJustify}, FontFamily=FontAwesome}" IsEnabled="{Binding ElementName=FindAndReplaceButton, Path=IsEnabled}">
-                        <fluent:MenuItem Header="Remove blank lines" Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Remove}}" Command="{catel:CommandManagerBinding Edit.RemoveBlankLines}" />
-                        <fluent:MenuItem Header="Remove duplicate lines" Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Remove}}" Command="{catel:CommandManagerBinding Edit.RemoveDuplicateLines}" />
-                        <fluent:MenuItem Header="Trim whitespaces" Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.AlignJustify}}" Command="{catel:CommandManagerBinding Edit.TrimWhitespaces}" />
+                    <fluent:SplitButton Header="{catel:LanguageBinding Ribbon_QuickFormat}" LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.AlignJustify}, FontFamily=FontAwesome}" IsEnabled="{Binding ElementName=FindAndReplaceButton, Path=IsEnabled}">
+                        <fluent:MenuItem Header="{catel:LanguageBinding Ribbon_RemoveBlankLines}" Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Remove}}" Command="{catel:CommandManagerBinding Edit.RemoveBlankLines}" />
+                        <fluent:MenuItem Header="{catel:LanguageBinding Ribbon_RemoveDuplicateLines}" Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Remove}}" Command="{catel:CommandManagerBinding Edit.RemoveDuplicateLines}" />
+                        <fluent:MenuItem Header="{catel:LanguageBinding Ribbon_TrimWhitespaces}" Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.AlignJustify}}" Command="{catel:CommandManagerBinding Edit.TrimWhitespaces}" />
                     </fluent:SplitButton>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox Header="Settings">
-                    <fluent:Button Header="Settings"
+                <fluent:RibbonGroupBox Header="{catel:LanguageBinding Ribbon_Settings}">
+                    <fluent:Button Header="{catel:LanguageBinding Ribbon_SettingsButton}"
                                    LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.Cog}, FontFamily=FontAwesome}"
                                    Command="{catel:CommandManagerBinding Settings.General}" />
 
-                    <fluent:SplitButton Header="Shortcuts"
+                    <fluent:SplitButton Header="{catel:LanguageBinding Ribbon_Shortcuts}"
                                         LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.KeyboardO}, FontFamily=FontAwesome}"
                                         Command="{Binding ShowKeyboardMappings}" >
                         <orchestra:KeyboardMappingsOverviewView />
                     </fluent:SplitButton>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox Header="Highlight">
+                <fluent:RibbonGroupBox Header="{catel:LanguageBinding Ribbon_Highlight}">
                     <local:FindView Margin="2,10,2,2"/>
                 </fluent:RibbonGroupBox>
 
-                <fluent:RibbonGroupBox Header="Statistic"
+                <fluent:RibbonGroupBox Header="{catel:LanguageBinding Ribbon_Statistic}"
                                        Visibility="{Binding Project, Converter={catel:ReferenceToCollapsingVisibilityConverter}}">
                     <local:ProjectStatisticView Margin="2,10,2,2"/>
                 </fluent:RibbonGroupBox>

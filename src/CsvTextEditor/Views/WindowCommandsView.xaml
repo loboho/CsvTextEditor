@@ -15,7 +15,7 @@
             <Button Style="{DynamicResource Fluent.Ribbon.Styles.WindowCommands.Button}"
                     Command="{Binding SwitchTheme}"
                     Visibility="{Binding IsInDarkMode, Converter={catel:BooleanToCollapsingVisibilityConverter}, ConverterParameter=True}"
-                    ToolTip="Switch to dark mode">
+                    ToolTip="{catel:LanguageBinding Theme_SwitchToDark}">
                 <Image Width="16" Height="16" 
                        Source="{orctheming:FontImage {x:Static local:FontAwesome.MoonO}, FontFamily=FontAwesome}" />
             </Button>
@@ -23,7 +23,7 @@
             <Button Style="{DynamicResource Fluent.Ribbon.Styles.WindowCommands.Button}"
                     Command="{Binding SwitchTheme}"
                     Visibility="{Binding IsInDarkMode, Converter={catel:BooleanToCollapsingVisibilityConverter}}"
-                    ToolTip="Switch to light mode">
+                    ToolTip="{catel:LanguageBinding Theme_SwitchToLight}">
                 <Image Width="16" Height="16" 
                        Source="{orctheming:FontImage {x:Static local:FontAwesome.SunO}, FontFamily=FontAwesome}" />
             </Button>

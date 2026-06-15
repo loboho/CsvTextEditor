@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net10.0-windows</TargetFrameworks>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
@@ -9,23 +10,19 @@
     <DefaultLanguage>en-US</DefaultLanguage>
     <Nullable>annotations</Nullable>
   </PropertyGroup>
-
   <PropertyGroup>
     <UseWpf>true</UseWpf>
   </PropertyGroup>
-
   <PropertyGroup>
     <!-- SonarQube requires a project guid -->
     <ProjectGuid>70261F8B-6554-4C72-BC0B-CFBD7A7DD94C</ProjectGuid>
   </PropertyGroup>
-
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <StartupObject />
     <NoWarn>$(NoWarn);SA1652</NoWarn>
     <ApplicationIcon>Resources\Icons\logo.ico</ApplicationIcon>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Catel.Fody" Version="7.1.0-alpha0016" PrivateAssets="all">
       <ExcludeAssets>runtime</ExcludeAssets>
@@ -51,7 +48,12 @@
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
     <PackageReference Include="System.CommandLine" Version="2.0.9" />
   </ItemGroup>
-
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.Build.shared.explicit.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.Build.shared.explicit.props')" />
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.Build.shared.mat.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.Build.shared.mat.props')" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <SourceRoot Include="D:\src\CsvTextEditor\" RepositoryUrl="https://github.com/WildGums/CsvTextEditor" SourceControl="git" RevisionId="cc872744e66e3cfd99cb0458ce4af7af19a8ce49" />
+  </ItemGroup>
 </Project>

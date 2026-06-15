@@ -20,7 +20,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <orchestra:RibbonBackstageTabItemHeader Grid.Row="0" HeaderText="Recent documents" 
+        <orchestra:RibbonBackstageTabItemHeader Grid.Row="0" HeaderText="{catel:LanguageBinding RecentItems_RecentDocuments}" 
                                                 HeaderTextStyleKey="RibbonBackstageSubHeaderLabelStyle"
                                                 Icon="{orctheming:FontImage {x:Static gum:FontAwesome.FolderOpenO}, FontFamily=FontAwesome}" />
 
@@ -56,7 +56,7 @@
                                                              CommandParameter="{Binding Name}"
                                                              Width="24" 
                                                              Height="24"
-                                                             ToolTip="Open in explorer" 
+                                                             ToolTip="{catel:LanguageBinding RecentItems_OpenInExplorer}" 
                                                              ShowBorder="False">
                                 <Image Source="{orctheming:FontImage {x:Static gum:FontAwesome.FolderOpenO}, FontFamily=FontAwesome}" />
                             </orchestra:RibbonBackstageButton>
@@ -111,7 +111,7 @@
                                                              CommandParameter="{Binding Name}" 
                                                              Width="24" 
                                                              Height="24" 
-                                                             ToolTip="Open in explorer" 
+                                                             ToolTip="{catel:LanguageBinding RecentItems_OpenInExplorer}" 
                                                              ShowBorder="False">
                                 <Image Source="{orctheming:FontImage {x:Static gum:FontAwesome.FolderOpenO}, FontFamily=FontAwesome}" />
                             </orchestra:RibbonBackstageButton>

@@ -34,10 +34,10 @@
                     </Separator.LayoutTransform>
                 </Separator>
 
-                <TextBlock Text="Line "/>
+                <TextBlock Text="{catel:LanguageBinding StatusBar_Line}"/>
                 <TextBlock Text="{Binding Line}"/>
 
-                <TextBlock Text="Column "/>
+                <TextBlock Text="{catel:LanguageBinding StatusBar_Column}"/>
                 <TextBlock Text="{Binding Column}"/>
 
                 <Separator Margin="3,0,3,0" Width="{Binding ElementName=stackPanel, Path=ActualHeight}">
@@ -57,7 +57,7 @@
 
             <StackPanel Visibility="{Binding IsUpdatedInstalled, Converter={StaticResource BooleanToCollapsingVisibilityConverter}}">
                 <Image Width="16" Height="16" Source="{orctheming:FontImage {x:Static csvtexteditor:FontAwesome.Download}}" 
-                    ToolTip="Update is installed, restart to enable new features" />
+                    ToolTip="{catel:LanguageBinding StatusBar_UpdateToolTip}" />
 
                 <Separator  Margin="3,0,3,0" Width="{Binding ElementName=stackPanel, Path=ActualHeight}">
                     <Separator.LayoutTransform>

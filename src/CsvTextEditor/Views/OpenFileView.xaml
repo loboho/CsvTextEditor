@@ -19,15 +19,15 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <Label Grid.Row="0" Content="Open" Style="{DynamicResource RibbonBackstageHeaderLabelStyle}" />
+            <Label Grid.Row="0" Content="{catel:LanguageBinding OpenFile_Open}" Style="{DynamicResource RibbonBackstageHeaderLabelStyle}" />
 
             <orchestra:RibbonBackstageTabControl Grid.Row="1">
-                <orchestra:RibbonBackstageTabItem HeaderText="Recent documents" 
+                <orchestra:RibbonBackstageTabItem HeaderText="{catel:LanguageBinding OpenFile_RecentDocuments}" 
                                                   Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.ClockO}, FontFamily=FontAwesome}">
                     <local:RecentlyUsedItemsView />
                 </orchestra:RibbonBackstageTabItem>
 
-                <orchestra:RibbonBackstageTabItem HeaderText="Computer" 
+                <orchestra:RibbonBackstageTabItem HeaderText="{catel:LanguageBinding OpenFile_Computer}" 
                                                   Icon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.FolderO}, FontFamily=FontAwesome}">
                     <Grid>
                         <Grid.RowDefinitions>
@@ -36,11 +36,11 @@
                         </Grid.RowDefinitions>
 
                         <orchestra:RibbonBackstageTabItemHeader Grid.Row="0" 
-                                                                HeaderText="Computer"
+                                                                HeaderText="{catel:LanguageBinding OpenFile_Computer}"
                                                                 HeaderTextStyleKey="RibbonBackstageSubHeaderLabelStyle" />
 
                         <fluent:Button Grid.Row="1" 
-                                       Header="Open..." 
+                                       Header="{catel:LanguageBinding OpenFile_OpenEllipsis}" 
                                        LargeIcon="{orctheming:FontImage {x:Static csvTextEditor:FontAwesome.FolderOpenO}, FontFamily=FontAwesome}"
                                        Command="{catel:CommandManagerBinding File.Open}"
                                        Style="{DynamicResource ButtonBackstageStyle}"
