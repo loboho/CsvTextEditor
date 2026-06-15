@@ -28,6 +28,7 @@
         
         [Model]
         [Expose(nameof(Models.Project.Text))]
+        [Expose(nameof(Models.Project.Separator))]
         public Project Project { get; set; }
 
         protected override Task InitializeAsync()

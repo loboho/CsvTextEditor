@@ -16,7 +16,8 @@
     </xamlbehaviors:Interaction.Behaviors>
     
     <csvTextEditor:CsvTextEditorControl x:Name="CsvTextEditor"
-                                         Text="{Binding Text}">
+                                         Text="{Binding Text}"
+                                         Separator="{Binding Separator}">
         <xamlbehaviors:Interaction.Behaviors>
             <behaviors:ExternalFileDragDropBehavior/>
         </xamlbehaviors:Interaction.Behaviors>
