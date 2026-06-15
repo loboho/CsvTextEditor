@@ -40,7 +40,8 @@
 
                 var project = new Project(location)
                 {
-                    Text = text
+                    Text = text,
+                    CodePage = encoding.CodePage
                 };
 
                 return project;

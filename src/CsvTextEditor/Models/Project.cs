@@ -19,6 +19,12 @@
 
         public string Text { get; set; }
 
+        /// <summary>
+        /// Gets or sets the code page used when writing the file back to disk.
+        /// When set to 0 or -1, UTF-8 is used as default.
+        /// </summary>
+        public int CodePage { get; set; }
+
         public bool Equals(Project other)
         {
             if (ReferenceEquals(null, other))
