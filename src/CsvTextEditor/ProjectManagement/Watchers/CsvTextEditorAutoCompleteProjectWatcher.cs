@@ -57,6 +57,11 @@
 
         private void RefreshAutoComplete()
         {
+            if (_csvTextEditorInstance is null)
+            {
+                return;
+            }
+
             _csvTextEditorInstance.IsAutocompleteEnabled = _csvTextEditorInstance.LinesCount <= MaxLineCountWithAutoCompleteEnabled;
         }
     }

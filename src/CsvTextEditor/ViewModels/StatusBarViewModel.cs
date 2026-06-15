@@ -105,7 +105,10 @@
 
             _csvTextEditorInstance = _csvTextEditorInstanceProvider.GetInstance((Project)args.NewProject);
 
-            _csvTextEditorInstance.CaretTextLocationChanged += OnCaretTextLocationChanged;
+            if (_csvTextEditorInstance is not null)
+            {
+                _csvTextEditorInstance.CaretTextLocationChanged += OnCaretTextLocationChanged;
+            }
 
             return Task.CompletedTask;
         }
@@ -119,6 +122,11 @@
 
         private string HeadingForLocation(Location location)
         {
+            if (_csvTextEditorInstance is null)
+            {
+                return string.Empty;
+            }
+
             var allText = _csvTextEditorInstance.GetText();
             var indexOfNewLine = allText.IndexOf(Symbols.NewLineEnd);
 

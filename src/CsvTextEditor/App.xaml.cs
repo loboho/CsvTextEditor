@@ -16,6 +16,7 @@
     using Microsoft.Extensions.Hosting;
     using Microsoft.Extensions.Logging;
     using Orc;
+    using Orc.CsvTextEditor;
     using Orc.ProjectManagement;
     using Orchestra;
     using Orchestra.Logging;
@@ -74,6 +75,7 @@
                     services.AddOrcAutomation();
                     services.AddOrcControls();
                     services.AddOrcCsvTextEditor();
+                    services.AddSingleton<ICsvTextEditorInstanceManager, CsvTextEditorInstanceManager>();
                     services.AddOrcFileSystem();
                     services.AddOrcFilterBuilder();
                     services.AddOrcFilterBuilderXaml();

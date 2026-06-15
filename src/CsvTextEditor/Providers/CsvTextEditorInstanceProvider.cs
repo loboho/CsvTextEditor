@@ -1,5 +1,6 @@
 ﻿namespace CsvTextEditor
 {
+    using System.Linq;
     using Models;
     using Orc.CsvTextEditor;
 
@@ -14,7 +15,19 @@
 
         public ICsvTextEditorInstance GetInstance(Project project)
         {
-            return _csvTextEditorInstanceManager.GetInstance(project.EditorId);
+            if (project is null)
+            {
+                return null;
+            }
+
+            if (project.EditorId is not null)
+            {
+                return _csvTextEditorInstanceManager.GetInstance(project.EditorId);
+            }
+
+            // No EditorId set (file opened via command line / file association);
+            // fall back to the first registered instance
+            return _csvTextEditorInstanceManager.GetInstances().FirstOrDefault();
         }
     }
 }

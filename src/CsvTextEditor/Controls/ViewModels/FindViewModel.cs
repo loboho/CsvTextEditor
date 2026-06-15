@@ -57,13 +57,22 @@
             var project = e.NewProject as Project;
 
             _csvTextEditorInstance = _csvTextEditorInstanceProvider.GetInstance(project);
-            _csvTextEditorInstance.TextChanged += OnTextChanged;
+
+            if (_csvTextEditorInstance is not null)
+            {
+                _csvTextEditorInstance.TextChanged += OnTextChanged;
+            }
 
             UpdateStatistic();
         }
 
         protected override void OnPropertyChanged(PropertyChangedEventArgs e)
         {
+            if (_csvTextEditorInstance is null)
+            {
+                return;
+            }
+
             if (e.HasPropertyChanged(nameof(SelectedColumnHeader)))
             {
                 var allText = _csvTextEditorInstance.GetText();
@@ -91,6 +100,11 @@
 
         private void UpdateColumnHeaders()
         {
+            if (_csvTextEditorInstance is null)
+            {
+                return;
+            }
+
             var allText = _csvTextEditorInstance.GetText();
             var indexOfNewLine = allText.IndexOf(Symbols.NewLineEnd);
 
@@ -107,6 +121,11 @@
 
         private void UpdateStatistic()
         {
+            if (_csvTextEditorInstance is null)
+            {
+                return;
+            }
+
             RowsCount = _csvTextEditorInstance.LinesCount;
             ColumnsCount = _csvTextEditorInstance.ColumnsCount;
         }
