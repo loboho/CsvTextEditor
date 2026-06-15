@@ -1,0 +1,27 @@
+<catel:DataWindow x:Class="CsvTextEditor.Views.SaveEncodingView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:catel="http://schemas.catelproject.com">
+
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" MinWidth="200" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,8"
+                   Text="Choose the encoding to use when saving this file." TextWrapping="Wrap" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Encoding:" />
+        <ComboBox Grid.Row="1" Grid.Column="1"
+                  ItemsSource="{Binding AvailableEncodings}"
+                  SelectedItem="{Binding SelectedEncoding}" />
+    </Grid>
+
+</catel:DataWindow>

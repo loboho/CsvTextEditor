@@ -20,6 +20,13 @@
 
             if (_projectManager.ActiveProject is Project project)
             {
+                if (string.IsNullOrEmpty(project.Location))
+                {
+                    // First-time save: redirect to Save As flow (file dialog + encoding selection)
+                    _commandManager.ExecuteCommand(Commands.File.SaveAs);
+                    return;
+                }
+
                 await _projectManager.SaveAsync(project);
             }
         }
