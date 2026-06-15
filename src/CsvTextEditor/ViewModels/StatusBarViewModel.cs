@@ -134,7 +134,13 @@
             {
                 var firstLine = allText.Substring(0, indexOfNewLine);
                 var columnHeaders = firstLine.Split(Symbols.Comma);
-                return columnHeaders[location.Column.Index].Trim();
+                var index = location.Column.Index;
+                if (index < 0 || index >= columnHeaders.Length)
+                {
+                    return string.Empty;
+                }
+
+                return columnHeaders[index].Trim();
             }
 
             return string.Empty;
