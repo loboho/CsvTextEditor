@@ -8,6 +8,6 @@ using System.Reflection;
 [assembly: AssemblyCompany("WildGums")]
 [assembly: AssemblyVersion("1.5.0")]
 [assembly: AssemblyFileVersion("1.5.0")]
-[assembly: AssemblyInformationalVersion("1.5.0-alpha.424")]
+[assembly: AssemblyInformationalVersion("1.5.0-alpha.432")]
 [assembly: AssemblyCopyright("Copyright © WildGums 2014 - 2026")]
 

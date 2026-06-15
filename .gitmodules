@@ -1,0 +1,3 @@
+[submodule "src/Orc.CsvTextEditor"]
+	path = src/Orc.CsvTextEditor
+	url = https://github.com/loboho/Orc.CsvTextEditor.git

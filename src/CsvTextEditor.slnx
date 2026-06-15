@@ -10,6 +10,9 @@
   <Folder Name="/src/App/">
     <Project Path="CsvTextEditor/CsvTextEditor.csproj" />
   </Folder>
+  <Folder Name="/src/Libs/">
+    <Project Path="Orc.CsvTextEditor\src\Orc.CsvTextEditor\Orc.CsvTextEditor.csproj" />
+  </Folder>
   <Folder Name="/src/Tests/">
     <Project Path="CsvTextEditor.Tests/CsvTextEditor.Tests.csproj" />
   </Folder>
