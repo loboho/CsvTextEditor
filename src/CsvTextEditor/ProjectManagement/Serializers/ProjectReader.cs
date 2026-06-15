@@ -41,7 +41,8 @@
                 var project = new Project(location)
                 {
                     Text = text,
-                    CodePage = encoding.CodePage
+                    CodePage = encoding.CodePage,
+                    Separator = Project.DetectSeparatorFromExtension(location)
                 };
 
                 return project;
