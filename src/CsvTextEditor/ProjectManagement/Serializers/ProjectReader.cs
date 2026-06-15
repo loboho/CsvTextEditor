@@ -1,5 +1,6 @@
 ﻿namespace CsvTextEditor.ProjectManagement
 {
+    using System;
     using System.Threading.Tasks;
     using Models;
     using Orc.FileSystem;
@@ -19,7 +20,6 @@
 
         protected override async Task<IProject> ReadFromLocationAsync(string location)
         {
-
             try
             {
                 var text = await _fileService.ReadAllTextAsync(location);
@@ -31,7 +31,8 @@
 
                 return project;
 
-            } catch (System.IO.IOException ex)
+            }
+            catch (System.IO.IOException ex)
             {
                 _notificationService.ShowNotification("Could not open file", ex.Message);
             }
